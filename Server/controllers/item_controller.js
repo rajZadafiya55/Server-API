@@ -48,11 +48,12 @@ exports.item = {
             if (!(name && price && category && req.file)) {
                 return res.send({ isSuccess: false, message: 'All input is required.' })
             }
+
             const itemObj = {
                 name: name,
                 price: price,
                 category: category,
-                imagename: 'http://localhost:5000/' + req.file.path
+                imagename: 'https://food-server.cyclic.app/' + req.file.path
             }
             const item = await ITEM.create(itemObj);
             if (item) {
@@ -108,9 +109,9 @@ exports.item = {
                 {
                     $set: {
                         name: name,
-                        category: category,
+                        category: category, 
                         price: price,
-                        imagename: 'http://localhost:5000/' + req.file.path
+                        imagename: 'https://food-server.cyclic.app/' + req.file.path
                     }
                 }
             );
