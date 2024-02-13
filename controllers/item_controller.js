@@ -3,14 +3,13 @@ const cloudinary = require("cloudinary").v2;
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const app = express();
-const { API_SECREAT,API_KEY,CLOUD_NAME } = process.env;
 
 app.use(fileUpload());
 
 cloudinary.config({
-  cloud_name: CLOUD_NAME,
-  api_key: API_KEY,
-  api_secret: API_SECREAT,
+  cloud_name: "dsrk7genk",
+  api_key: "812371659762263",
+  api_secret: "E3YB8OudKtOrjyQFYDIsPRIFelw",
 });
 
 exports.item = {
